@@ -2,6 +2,6 @@ streamlit
 langchain-openai
 langchain-community
 langchain-text-splitters
-chromadb==0.4.24
+faiss-cpu
 pypdf
-numpy==1.26.4
+openai

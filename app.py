@@ -1,7 +1,7 @@
 import os
 import streamlit as st
 from langchain_openai import ChatOpenAI, OpenAIEmbeddings
-from langchain_community.vectorstores import Chroma
+from langchain_community.vectorstores import FAISS
 from langchain_community.document_loaders import PyPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.prompts import ChatPromptTemplate
@@ -32,9 +32,9 @@ def load_rag_components():
 
     # Create vector database
     embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
-    vectorstore = Chroma.from_documents(
-        documents=chunks,
-        embedding=embeddings
+    vectorstore = FAISS.from_documents(
+    documents=chunks,
+    embedding=embeddings
     )
 
     # Set up retriever — increased to 6 chunks for better coverage
