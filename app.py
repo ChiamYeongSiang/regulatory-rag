@@ -9,7 +9,9 @@ from langchain_core.runnables import RunnablePassthrough, RunnableLambda
 from langchain_core.output_parsers import StrOutputParser
 
 # ---- CONFIGURATION ----
+import openai
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+openai.api_key = st.secrets["OPENAI_API_KEY"]
 PDF_FILES = ["FDA.pdf", "EUMDR.pdf"]
 
 # ---- LOAD & PROCESS DOCUMENTS ----
