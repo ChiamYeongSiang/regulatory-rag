@@ -103,8 +103,11 @@ with st.sidebar:
     st.divider()
     st.header("ℹ️ About")
     st.write("This assistant answers questions based on:")
-    st.write("• FDA Medical Device Guidance (2026)")
     st.write("• EU MDR Compliance Guide")
+    st.write("• ISO 13485:2016 Quality Management")
+    st.write("• FDA 21 CFR Part 11 Guidance")
+    st.write("• FDA Process Validation Guidance")
+    st.write("• Medical Device Quality System Amendment")
     
     st.divider()
     st.caption("Built with LangChain + FAISS + OpenAI")
