@@ -96,8 +96,8 @@ def get_answer_with_sources(question, retriever, llm, prompt):
     return answer, sources
 
 # ---- STREAMLIT UI ----
-st.title("🤖 Regulatory AI Assistant")
-st.caption("Ask questions about FDA and EU MDR regulations")
+st.title("🤖 Medical Device Regulatory AI Assistant")
+st.caption("Your AI-powered assistant for medical device regulatory compliance queries")
 
 # ---- SIDEBAR ----
 with st.sidebar:
