@@ -101,7 +101,7 @@ with st.sidebar:
     st.write("• EU MDR Compliance Guide")
     
     st.divider()
-    st.caption("Built with LangChain + ChromaDB + OpenAI")
+    st.caption("Built with LangChain + FAISS + OpenAI")
 
 # ---- LOAD RAG COMPONENTS ----
 with st.spinner("Loading documents... please wait..."):
