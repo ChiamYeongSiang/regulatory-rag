@@ -12,7 +12,13 @@ from langchain_core.output_parsers import StrOutputParser
 import openai
 os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 openai.api_key = st.secrets["OPENAI_API_KEY"]
-PDF_FILES = ["FDA.pdf", "EUMDR.pdf"]
+PDF_FILES = [
+    "EUMDR.pdf",
+    "ISO-13485-2016-EN.pdf",
+    "FDA Guidance on 21 CFR Part 11.pdf",
+    "FDA Guidance Process Validation – General Principles and Practices.pdf",
+    "Medical Device Quality System Ammendment.pdf"
+]
 
 # ---- LOAD & PROCESS DOCUMENTS ----
 @st.cache_resource
