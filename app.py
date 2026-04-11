@@ -16,7 +16,7 @@ PDF_FILES = [
     "EUMDR.pdf",
     "ISO-13485-2016-EN.pdf",
     "FDA Guidance on 21 CFR Part 11.pdf",
-    "FDA Guidance Process Validation – General Principles and Practices.pdf",
+    "FDA Guidance Process Validation - General Principles and Practices.pdf",
     "Medical Device Quality System Ammendment.pdf"
 ]
 
