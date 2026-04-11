@@ -44,7 +44,7 @@ def load_rag_components():
     )
 
     # Set up retriever — increased to 6 chunks for better coverage
-    retriever = vectorstore.as_retriever(search_kwargs={"k": 6})
+    retriever = vectorstore.as_retriever(search_kwargs={"k": 10})
 
     # Set up LLM
     llm = ChatOpenAI(model="gpt-3.5-turbo", temperature=0)
@@ -52,12 +52,17 @@ def load_rag_components():
     # Set up prompt
     prompt = ChatPromptTemplate.from_template("""
     You are a helpful regulatory affairs assistant specializing 
-    in medical devices. Answer the question based ONLY on the 
-    context provided below. If the answer is not in the context, 
-    say "I don't have enough information in my documents to answer this."
+    in medical devices. Answer the question based on the context 
+    provided below.
+
+    If the question asks for a comparison between regulations or 
+    standards, summarize what each document says about the topic 
+    separately and then provide a comparison.
     
-    When comparing FDA and EU MDR, use information from both 
-    documents if available.
+    If the answer is not in the context, say "I don't have enough 
+    information in my documents to answer this. Try asking about 
+    a specific regulation such as ISO 13485 requirements, EU MDR 
+    GSPR, FDA 21 CFR Part 11, or FDA Process Validation."
 
     Context:
     {context}
